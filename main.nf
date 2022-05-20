@@ -1,6 +1,21 @@
 #! /usr/bin/env nextflow
 
-sample_name = "first_sample" 
-params.cooler = "sample.mapq30.1000.mcool" 
+// Show help message
+if (params.help) {
+    helpMessage()
+    exit 0
+}
 
-println "I will process $sample_name with this cooler: $params.cooler"
+println "I will process $params.sample_name with: \n$params.cooler"
+
+
+process runBlast {
+
+  script:
+  """
+  blastn  -num_threads 2 -db $PWD/DB/blastDB -query $PWD/input.fasta -outfmt 6 -out input.blastout
+  """
+
+}
+
+
