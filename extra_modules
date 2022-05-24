@@ -1,0 +1,43 @@
+process coverage{
+input:
+  output:
+
+  script:
+  """
+  cooltools coverage --bigwig -p $params.threads --output $params.sample/.coverage.$params.resolution/.tsv $params.cooler
+  """
+}
+
+// Show help message
+//if (params.help) {
+//    helpMessage()
+//   exit 0
+//}
+
+process insulation {
+    input:
+  output:
+  script:
+  """
+  cooltools insulation -p $params.threads
+  """
+}
+
+
+process dots {
+  input:
+  output:
+  script:
+  """
+  cooltools call-dots -
+  """
+}
+
+process saddle {
+  input:
+  output:
+  script:
+  """
+  cooltools saddle -
+  """
+}
