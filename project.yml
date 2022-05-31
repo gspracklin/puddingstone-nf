@@ -1,0 +1,19 @@
+
+cooler: './tests/*.sacCer3.mapq_30.10000.mcool'
+
+expected:
+    expectedOptions: "-p 2"
+    resolution: 20000
+    window: 100000
+    threads: 4
+    help: false
+
+
+output:
+      expected: 'results/expected/'
+      insulation: 'results/insulation'
+      eigs: 'results/eigenvectors/'
+      saddle: 'results/saddle'
+      coolers_library: 'results/coolers_library/'
+      coolers_library_group: 'results/coolers_library_group/'
+      stats_library_group: 'results/stats_library_group/'
