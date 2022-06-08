@@ -1,13 +1,6 @@
 #!/usr/bin/env nextflow
 nextflow.enable.dsl=2
 
-//TODO
-//fix git branches
-//$tasks.cpus
-//docker
-//build tests
-
-
 include { expected; insulation; eigs; saddle } from './modules'
 
 Channel

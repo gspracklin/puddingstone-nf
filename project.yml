@@ -14,6 +14,3 @@ output:
       insulation: 'results/insulation'
       eigs: 'results/eigenvectors/'
       saddle: 'results/saddle'
-      coolers_library: 'results/coolers_library/'
-      coolers_library_group: 'results/coolers_library_group/'
-      stats_library_group: 'results/stats_library_group/'
