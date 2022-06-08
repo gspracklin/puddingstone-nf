@@ -1,0 +1,12 @@
+name: cooltools_env
+channels:              
+    - conda-forge #lowest priority                  
+    - defaults                  
+    - bioconda
+dependencies:
+    - python=3.8
+    - cython
+    - numpy
+    - nextflow
+    - cooltools
+    - ucsc-bedgraphtobigwig
